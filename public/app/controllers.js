@@ -1,4 +1,4 @@
 (function(){
   angular.module('IndecisiveCtrls', ['IndecisiveServices'])
-  .controller('HomeCtrl', );
+  .controller('HomeCtrl', HomeCtrl);
 })();
