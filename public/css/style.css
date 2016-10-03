@@ -1,8 +1,20 @@
-body {
-  font-family: 'Open Sans', sans-serif;
-
+.comingSoon {
+  font-family: 'Coming Soon', cursive;
 }
-.navbar{
-  background-color: #e24e42;
-  color:white;
+#navSpacer{
+  width:100%;
+  background-color: transparent;
+  height: 50px;
+}
+#mainNav{
+  font-family: 'Coming Soon', cursive;
+  background-color: #f24c43;
+  color: white;
+  border:none;
+}
+.navWords{
+  color:white !important;
+}
+#questionMark{
+  text-align: center;
 }

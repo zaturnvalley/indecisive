@@ -1,12 +1,12 @@
 (function() {
-  angular.module('IndecisiveServices' , ['ngResource'])
-  .factory('Auth', ['$window', function($window) {
+  var app = angular.module('IndecisiveApp');
+  app.factory('Auth', ['$window', function($window) {
     return{
       saveToken: function(token) {
         $window.localStorage['secretindecisive-token'] = token;
       },
       getToken: function() {
-        eturn $window.localStorage['secretindecisive-token']
+        return $window.localStorage['secretindecisive-token']
       },
       removeToken: function() {
         $window.localStorage.removeItem('secretindecisive-token');

@@ -2,11 +2,12 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var path = require('path');
-var expressJWT = require('express-jwt');
-var jwt = require('jwt');
+// var expressJWT = require('express-jwt');
+// var jwt = require('jwt');
 
 //set
 var app = express();
+app.use(express.static(__dirname + '/public'));
 
 //mongoose models and connection
 var mongoose = require('mongoose');

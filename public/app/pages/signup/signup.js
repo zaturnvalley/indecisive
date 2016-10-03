@@ -1,8 +1,8 @@
 (function(){
-  angular.module('IndecisiveApp');
-  .controller('SignupCtrl', ['$http', '$state', SignupCtrl]);
+  angular.module('IndecisiveApp')
+  .controller('SignupCtrl', ['$http', '$state', 'Auth', 'AuthInterceptor', SignupCtrl]);
 
-  function SignupCtrl() {
+  function SignupCtrl($http, $state, Auth) {
     var vm = this;
     var user = {
       username: '',

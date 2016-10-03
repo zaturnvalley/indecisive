@@ -1,9 +1,9 @@
 (function() {
   angular.module('IndecisiveApp')
   .component('navbar', {
-    templateUrl: './components/navbar/navbar.html',
+    templateUrl: 'app/components/navbar/navbar.html',
     controller: NavbarCtrl,
-    controllerAs: 'navbar'
+    controllerAs: 'vm'
   });
 
   function NavbarCtrl() {

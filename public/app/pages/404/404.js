@@ -1,6 +1,5 @@
 (function() {
-  angular.module('IndecisiveApp', Error404Ctrl)
-
+  angular.module('IndecisiveApp')
   .controller('Error404Ctrl', Error404Ctrl);
 
   function Error404Ctrl() {

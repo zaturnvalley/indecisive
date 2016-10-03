@@ -1,9 +1,9 @@
 (function (){
-  var app = angular.module('IndecisiveApp', ['ui.router', 'IndecisiveServices']);
+  var app = angular.module('IndecisiveApp', ['ui.router', 'ngResource']);
 
   app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', '$httpProvider', 
     function($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
-      $httpProvider.interceptors.push('AuthInterceptor');
+      //$httpProvider.interceptors.push('AuthInterceptor');
 
       $urlRouterProvider.otherwise('/404');
 
@@ -20,7 +20,7 @@
       })
       .state('signup', {
         url: '/signup',
-        templateUrl: 'app/pages/signup/signup.html'
+        templateUrl: 'app/pages/signup/signup.html',
         controller: 'SignupCtrl as vm'
       })
 
