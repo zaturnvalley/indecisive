@@ -1,5 +1,5 @@
 (function (){
-  var app = angular.module('IndecisiveApp', ['ui.router']);
+  var app = angular.module('IndecisiveApp', ['ui.router', 'IndecisiveServices']);
 
   app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', '$httpProvider', 
     function($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
@@ -15,8 +15,15 @@
       })
       .state('404', {
         url: '/404',
-        templateUrl: 'app/pages/404/404.html'
-      });
-      locationProvider.html5Mode(true);
+        templateUrl: 'app/pages/404/404.html',
+        controller: 'Error404Ctrl as vm'
+      })
+      .state('signup', {
+        url: '/signup',
+        templateUrl: 'app/pages/signup/signup.html'
+        controller: 'SignupCtrl as vm'
+      })
+
+      $locationProvider.html5Mode(true);
     }])
 })();
