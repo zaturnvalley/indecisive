@@ -10,7 +10,8 @@
       $stateProvider
       .state('home', {
         url: '/',
-        templateUrl: 'app/views/home.html'
+        templateUrl: 'app/pages/home/home.html',
+        controller: 'HomeCtrl as vm'
       })
     }])
 })();
