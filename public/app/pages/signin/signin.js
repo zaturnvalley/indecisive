@@ -8,7 +8,7 @@
       username = '',
       password = ''
     }
-    vm.userLogin = function(){
+    vm.userSignin = function(){
       $http.post('/api/auth', vm.user).then(function success(res) {
         Auth.saveToken(res.data.token);
         $state.go('home');
