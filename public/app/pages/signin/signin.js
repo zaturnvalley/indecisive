@@ -9,6 +9,7 @@
       password = ''
     }
     vm.userSignin = function(){
+      console.log('pressed');
       $http.post('/api/auth', vm.user).then(function success(res) {
         Auth.saveToken(res.data.token);
         $state.go('home');

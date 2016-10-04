@@ -10,7 +10,7 @@
       password: ''
     }
     vm.userSignup = function () {
-      $http.post('api/users', vm.user).then(function success(res) {
+      $http.post('/api/users', vm.user).then(function success(res) {
         $state.go('home');
       }, function error(res){
         console.log(res);

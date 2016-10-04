@@ -1,17 +1,17 @@
-<form ng-submit="userSignup()" class="comingSoon text-center">
+<form ng-submit="vm.userSignup()" class="comingSoon text-center">
   <legend>Sign Up</legend>
 
   <div class="form-group">
     <label for="username">Username</label>
-    <input type="username" name="username" class="form-control" id="username" placeholder="Enter Your Username" ng-model="user.username">
+    <input type="username" name="username" class="form-control" id="username" placeholder="Enter Your Username" ng-model="vm.user.username">
   </div>
   <div class="form-group">
     <label for="email">Email</label>
-    <input type="email" class="form-control" id="email" placeholder="Enter Your Email" ng-model="user.email">
+    <input type="email" class="form-control" id="email" placeholder="Enter Your Email" ng-model="vm.user.email">
   </div>
   <div class="form-group">
     <label for="password">Password</label>
-    <input type="password" class="form-control" id="password" placeholder="********" ng-model="user.password">
+    <input type="password" class="form-control" id="password" placeholder="********" ng-model="vm.user.password">
   </div>
 
   <button type="submit" style="background-color: #056571; color:white" class="btn">Sign Up</button>

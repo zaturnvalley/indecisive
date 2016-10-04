@@ -5,9 +5,9 @@
   function ChoicesCtrl() {
     var vm = this;
 
-    vm.user.category = {
-      type = '',
-      rating = ''
-    }
+    // vm.user.category = {
+    //   type = '',
+    //   rating = ''
+    // }
   }
 })()
