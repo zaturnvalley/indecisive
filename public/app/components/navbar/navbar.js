@@ -11,6 +11,8 @@
     var vm = this;
     vm.Auth = Auth;
     vm.AuthTester = Auth.isLoggedIn();
-    console.log(vm.AuthTester);
+    vm.LogOut = function(Auth){
+      vm.Auth.removeToken();
+    }
   }
 })()
