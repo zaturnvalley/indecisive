@@ -35,12 +35,10 @@ app.use(function (err, req, res, next) {
 
 //post api, if auth, return signed jwt
 app.post('/api/auth', function(req, res) {
-  console.log('***AUTH Email', req.body.user);
-  User.findOne({username: req.body.user}, function(err, user) {
+  User.findOne({username: req.body.username}, function(err, user) {
     //return 401 if error or no user
-    console.log('***', req.body.user);
     if (err || !user) return res.status(401).send({message: 'User not found'});
-    console.log('after first 401');
+    console.log('after first 401', req.body.password);
     //attempt to auth user
     var isAuthenticated = user.authenticated(req.body.password);
     //return 401 if invalid
@@ -49,6 +47,7 @@ app.post('/api/auth', function(req, res) {
     //sign jwt with payload & secret then return
     var token = jwt.sign(user.toJSON(), secret);
     console.log('after jwt sign');
+    console.log(user);
     return res.send({user: user, token: token});
   })
 })

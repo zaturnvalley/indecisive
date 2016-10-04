@@ -1,6 +1,6 @@
 (function(){
   angular.module('IndecisiveApp')
-  .controller('ChoicesCtrl', [ChoicesCtrl]);
+  .controller('ChoicesCtrl', ['Auth', 'AuthInterceptor', ChoicesCtrl]);
 
   function ChoicesCtrl() {
     var vm = this;

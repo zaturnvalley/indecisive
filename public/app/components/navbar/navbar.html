@@ -2,9 +2,9 @@
   <div class="navbar-brand navWords" ui-sref="home" value="indecisive">indecisive</div>
   <img id="brand" src="img/donut.png" ui-sref="home">
   <ul class="nav navbar-nav navbar-right">
-      <li><a class="navWords" ui-sref="choices" ng-show="Auth.isLoggedIn()" value="Choices">My Choices</a></li>
-      <li><a class="navWords" ui-sref="signup" ng-hide="Auth.isLoggedIn()" value="Sign Up">Sign Up</a></li>
-      <li><a class="navWords" ui-sref="signin" ng-hide="Auth.isLoggedIn()" value="Sign In">Sign In</a></li>
+      <li><a class="navWords" ui-sref="choices" ng-show="vm.Auth.isLoggedIn()" value="Choices">My Choices</a></li>
+      <li><a class="navWords" ui-sref="signup" ng-hide="vm.Auth.isLoggedIn()" value="Sign Up">Sign Up</a></li>
+      <li><a class="navWords" ui-sref="signin" ng-hide="vm.Auth.isLoggedIn()" value="Sign In">Sign In</a></li>
       <li style="width:15px"> </li>
   </ul>
 </nav>

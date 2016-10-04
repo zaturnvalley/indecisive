@@ -9,7 +9,6 @@
       password: ''
     }
     vm.userSignin = function(){
-      console.log('**On front end', vm.user);
       $http.post('/api/auth', vm.user).then(function success(res) {
         Auth.saveToken(res.data.token);
         $state.go('home');
