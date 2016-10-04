@@ -35,18 +35,20 @@ app.use(function (err, req, res, next) {
 
 //post api, if auth, return signed jwt
 app.post('/api/auth', function(req, res) {
-  User.findOne({email: req.body.email}, function(err, user) {
+  console.log('***AUTH Email', req.body.user);
+  User.findOne({username: req.body.user}, function(err, user) {
     //return 401 if error or no user
+    console.log('***', req.body.user);
     if (err || !user) return res.status(401).send({message: 'User not found'});
-
+    console.log('after first 401');
     //attempt to auth user
     var isAuthenticated = user.authenticated(req.body.password);
     //return 401 if invalid
     if (err || !isAuthenticated) return res.status(401).send({message: 'User not authenticated'});
-
+    console.log('after second 401');
     //sign jwt with payload & secret then return
     var token = jwt.sign(user.toJSON(), secret);
-
+    console.log('after jwt sign');
     return res.send({user: user, token: token});
   })
 })

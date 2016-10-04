@@ -2,14 +2,14 @@
   angular.module('IndecisiveApp')
   .controller('SigninCtrl', ['$http', '$state', 'Auth', 'AuthInterceptor', SigninCtrl]);
 
-  function SigninCtrl($http, $state, Auth) {
+  function SigninCtrl($http, $state, Auth, AuthInterceptor) {
     var vm = this;
     vm.user = {
-      username = '',
-      password = ''
+      username: '',
+      password: ''
     }
     vm.userSignin = function(){
-      console.log('pressed');
+      console.log('**On front end', vm.user);
       $http.post('/api/auth', vm.user).then(function success(res) {
         Auth.saveToken(res.data.token);
         $state.go('home');

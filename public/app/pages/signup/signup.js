@@ -2,7 +2,7 @@
   angular.module('IndecisiveApp')
   .controller('SignupCtrl', ['$http', '$state', 'Auth', 'AuthInterceptor', SignupCtrl]);
 
-  function SignupCtrl($http, $state, Auth) {
+  function SignupCtrl($http, $state, Auth, AuthInterceptor) {
     var vm = this;
     var user = {
       username: '',
