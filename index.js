@@ -33,6 +33,24 @@ app.use(function (err, req, res, next) {
     res.status(401).send({message: 'You need authorization to view this information'});
   }
 });
+
+//post api, if auth, return signed jwt
+app.post('/api/auth', function(req, res) {
+  User.findOne({email: req.body.email}, function(err, user) {
+    //return 401 if error or no user
+    if (err || !user) return res.status(401).send({message: 'User not found'});
+
+    //attempt to auth user
+    var isAuthenticated = user.authenticated(req.body.password);
+    //return 401 if invalid
+    if (err || !isAuthenticated) return res.status(401).send({message: 'User not authenticated'});
+
+    //sign jwt with payload & secret then return
+    var token = jwt.sign(user.toJSON(), secret);
+
+    return res.send({user: user, token: token});
+  })
+})
 //route
 app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname, 'public/index.html'));
