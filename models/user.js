@@ -8,6 +8,14 @@ var UserSchema = mongoose.Schema({
     required: true,
     unique: true
   },
+  items: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Item'
+  }],
+  ratings: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Rating'
+  }],
   password: {
     type: String,
     required: true
