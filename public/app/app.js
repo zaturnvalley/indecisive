@@ -1,5 +1,5 @@
 (function (){
-  var app = angular.module('IndecisiveApp', ['ui.router', 'ngResource']);
+  var app = angular.module('IndecisiveApp', ['ui.router', 'ngResource', 'chart.js']);
 
   app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', '$httpProvider', 
     function($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {

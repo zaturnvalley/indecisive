@@ -7,7 +7,6 @@ var path = require('path');
 var expressJWT = require('express-jwt');
 var jwt = require('jsonwebtoken');
 var secret = process.env.JWT_SECRET;
-// var Chart = require('chart.js');
 
 //set
 var app = express();

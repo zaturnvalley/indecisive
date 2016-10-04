@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "angular-chart.js": "^1.0.3",
     "bcrypt": "^0.8.7",
     "body-parser": "^1.15.2",
     "chart.js": "^2.3.0",
