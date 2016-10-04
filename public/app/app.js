@@ -23,6 +23,11 @@
         templateUrl: 'app/pages/signup/signup.html',
         controller: 'SignupCtrl as vm'
       })
+      .state('signin', {
+        url: '/signin',
+        templateUrl: 'app/pages/signin/signin.html',
+        controller: 'SigninCtrl as vm'
+      })
 
       $locationProvider.html5Mode(true);
     }])
