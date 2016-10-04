@@ -8,7 +8,7 @@
 }
 #mainNav{
   font-family: 'Coming Soon', cursive;
-  background-color: #f24c43;
+  background-color: #414141;
   color: white;
   border:none;
 }
@@ -17,4 +17,15 @@
 }
 #questionMark{
   text-align: center;
+}
+.navbar {
+    position: relative;
+}
+#brand {
+    position: absolute;
+    left: 50%;
+    margin-left: -50px !important;  /* 50% of logo width */
+    display: block;
+    height: 40px;
+    top:5px;
 }

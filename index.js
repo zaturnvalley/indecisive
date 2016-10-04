@@ -4,6 +4,7 @@ var bodyParser = require('body-parser');
 var path = require('path');
 // var expressJWT = require('express-jwt');
 // var jwt = require('jwt');
+// var Chart = require('chart.js');
 
 //set
 var app = express();
@@ -21,3 +22,4 @@ app.get('/*', function(req, res) {
 var server = app.listen(process.env.PORT || 3000);
 
 module.exports = server;
+// module.exports = Chart;

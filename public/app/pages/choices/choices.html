@@ -1,4 +1,5 @@
 <link rel="stylesheet" type="text/css" href="../../css/star.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.bundle.js">
 <form ng-submit="newIndecision()" class="comingSoon text-center">
   <legend>What's your newest Indecision?</legend>
 
@@ -24,5 +25,10 @@
       </fieldset>
   </div>
   
-  <button type="submit" class="btn btn-info">Submit Indecision</button>
+  <button type="submit" style="background-color: #ff615c; color:white" class="btn">Submit Indecision</button>
 </form>
+
+<canvas id="myChart" width="400" height="400"></canvas>
+
+
+<script src="js/chart.js"></script>
