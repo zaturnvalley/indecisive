@@ -28,7 +28,11 @@
         templateUrl: 'app/pages/signin/signin.html',
         controller: 'SigninCtrl as vm'
       })
-
+      .state('choices', {
+        url: '/choices',
+        templateUrl: 'app/pages/choices/choices.html',
+        controller: 'ChoicesCtrl as vm'
+      })
       $locationProvider.html5Mode(true);
     }])
 })();
