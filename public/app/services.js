@@ -40,6 +40,9 @@
     }
   }])
   .factory('Tags', ['$resource', 'Auth', function($resource, Auth) {
-    return $resource('/api/items/tags/:id');
+    return $resource('/api/items/tags');
+  }])
+  .factory('Charts', ['$resource', 'Auth', function($resource, Auth) {
+    return $resource('/api/items/charts')
   }]);
 })();

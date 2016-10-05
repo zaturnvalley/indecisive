@@ -25,7 +25,6 @@ app.use(require('morgan')('dev'));
 
 app.use('/api/users', expressJWT({secret: secret}).unless({method: 'POST'}), require('./controllers/users'));
 app.use('/api/items', expressJWT({secret: secret}).unless({method: ['GET', 'POST']}), require ('./controllers/items'));
-//app.use('/api/items', require('./controllers/items'));
 
 
 //middleware to check if user is authorized

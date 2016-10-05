@@ -56,6 +56,21 @@ router.route('/')
     })
   });
 
+  router.route('/charts')
+  .get(function(req, res) {
+    Item.find({}, function(err, items) {
+      if (err) return res.status(500).send(err);
+      Tag.find({}, function(err, tags) {
+        if (err) return res.status(500).send(err);
+        Rating.find({}, function(err,ratings){
+          if (err) return res.status(500).send(err);
+          console.log(items, tags, ratings);
+          return res.send(items, tags, ratings);
+        });
+      });
+    });
+  });
+
   router.route('/:id')
   .get(function(req, res) {
     console.log("/:id")
