@@ -4,7 +4,7 @@
 
   function SignupCtrl($http, $state, Auth, AuthInterceptor) {
     var vm = this;
-    var user = {
+    vm.user = {
       username: '',
       email: '',
       password: ''

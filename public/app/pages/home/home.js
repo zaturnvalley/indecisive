@@ -4,5 +4,6 @@
 
   function HomeCtrl(Auth, AuthInterceptor) {
     var vm = this;
+    vm.Auth = Auth;
   }
 })()

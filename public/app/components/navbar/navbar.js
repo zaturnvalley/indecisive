@@ -10,7 +10,6 @@
   function NavbarCtrl(Auth) {
     var vm = this;
     vm.Auth = Auth;
-    vm.AuthTester = Auth.isLoggedIn();
     vm.LogOut = function(Auth){
       vm.Auth.removeToken();
     }
