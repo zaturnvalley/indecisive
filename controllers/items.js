@@ -68,5 +68,13 @@ router.route('/')
       return res.send({message: 'success'});
     });
   });
+  router.route('/tags')
+  .get(function(req, res) {
+    Tag.find(function(err, tags) {
+      if (err) return res.status(500).send(err);
+
+      return res.send(tags);
+    })
+  })
 
   module.exports = router;

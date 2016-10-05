@@ -38,5 +38,8 @@
         return config;
       }
     }
+  }])
+  .factory('Tags', ['$resource', function($resource) {
+    return $resource('/api/tags')
   }]);
 })();
