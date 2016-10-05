@@ -1,9 +1,10 @@
 var express = require('express');
 var Item = require('../models/item');
-var Rating = require('../models/schema/rating');
+var Rating = require('../models/schemas/rating');
 var User = require('../models/user');
-var Tag = require('../models/schema/tag');
+var Tag = require('../models/schemas/tag');
 var router = express.Router();
+var findOrCreate = require('mongoose-findorcreate');
 
 router.route('/')
   .get(function(req, res) {
@@ -21,7 +22,7 @@ router.route('/')
       Item.findOrCreate({name: req.body.name}, function(err,item) {
         if (err) return res.status(500).send(err);
 
-        Rating.create(req.body.rating, function(err, rating) {
+        Rating.create({rating: req.body.rating}, function(err, rating) {
           if (err) return res.status(500).send(err);
 
           Tag.findOrCreate({tag: req.body.tag}, function(err, tag) {

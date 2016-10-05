@@ -17,6 +17,7 @@
     "express-jwt": "^5.0.0",
     "jsonwebtoken": "^7.1.9",
     "mongoose": "^4.6.2",
+    "mongoose-findorcreate": "^0.1.2",
     "morgan": "^1.7.0"
   }
 }

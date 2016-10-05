@@ -1,4 +1,5 @@
 var mongoose = require('mongoose');
+var findOrCreate = require('mongoose-findorcreate');
 
 var ItemSchema = mongoose.Schema({
   name: String,
@@ -11,5 +12,5 @@ var ItemSchema = mongoose.Schema({
     ref: 'Tag'
   }]
 });
-
+ItemSchema.plugin(findOrCreate);
 module.exports = mongoose.model('Item', ItemSchema);
