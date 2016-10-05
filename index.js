@@ -24,7 +24,7 @@ app.use(express.static(__dirname + '/public'));
 app.use(require('morgan')('dev'));
 
 app.use('/api/users', expressJWT({secret: secret}).unless({method: 'POST'}), require('./controllers/users'));
-app.use('/api/items', expressJWT({secret: secret}), require ('./controllers/items'));
+app.use('/api/items', expressJWT({secret: secret}).unless({method: 'POST'}), require ('./controllers/items'));
 
 
 //middleware to check if user is authorized

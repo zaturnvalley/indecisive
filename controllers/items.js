@@ -7,13 +7,14 @@ router.route('/')
     Item.find(function(err, items) {
       if (err) return res.status(500).send(err);
 
-      return res.send(items)
+      return res.send(items);
     });
   })
   .post(function(req, res) {
-    Item.create(req.body, function(err, item) {
+    console.log('***POST CONTROLLER', req.body);
+    Item.create(req.body.name, function(err, item) {
       if (err) return res.status(500).send(err);
-
+      Ratings.create(req.body.rating)
       return res.send(item);
     });
   });

@@ -1,6 +1,6 @@
 <link rel="stylesheet" type="text/css" href="../../css/star.css">
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.bundle.js">
-<form ng-submit="newIndecision()" class="comingSoon text-center">
+<form ng-submit="vm.submitItem()" class="comingSoon text-center">
   <legend>What's your newest Indecision?</legend>
 
   <div class="form-group">
@@ -11,7 +11,7 @@
   <div class="form-group">
     <label for="rating">Rate This Experience</label>
     <br>
-    <fieldset class="rating" ng-model="vm.rating.rating">
+    <fieldset class="rating" ng-model="vm.item.rating">
           <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
           <input type="radio" id="star4half" name="rating" value="4.5" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
           <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>

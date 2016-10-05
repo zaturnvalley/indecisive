@@ -4,16 +4,13 @@
 
   function ChoicesCtrl($http, $state, Auth, AuthInterceptor) {
     var vm = this;
-    var item = {
-      name: ''
-    }
-    var rating = {
+    vm.item = {
+      name: '',
       rating: 0,
-      user: ,
-      item: 
+      user: Auth.user
     }
     vm.submitItem = function() {
-      $http.post('/api/item', vm.item).then(function success(res) {
+      $http.post('/api/items', vm.item).then(function success(res) {
         $state.go('home');
       }, function error(res) {
         console.log(res);
