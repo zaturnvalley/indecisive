@@ -11,6 +11,8 @@
       tag: ''
     }
     vm.submitItem = function() {
+      console.log(Auth.currentUser().id)
+      console.log(vm.item.rating)
       $http.post('/api/items', vm.item).then(function success(res) {
         $state.go('home');
       }, function error(res) {

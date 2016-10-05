@@ -14,4 +14,5 @@
       vm.Auth.removeToken();
     }
   }
+  NavbarCtrl.$inject = ['Auth']
 })()
