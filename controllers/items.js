@@ -46,8 +46,19 @@ router.route('/')
     return res.send(item);
   });
 
+  router.route('/tags')
+  .get(function(req, res) {
+    console.log("/tags");
+    Tag.find({}, function(err, tags) {
+      if (err) return res.status(500).send(err);
+      console.log("got tags:", tags);
+      return res.send(tags);
+    })
+  });
+
   router.route('/:id')
   .get(function(req, res) {
+    console.log("/:id")
     Item.findById(req.params.id, function(err, item){
       if (err) return res.status(500).send(err);
 
@@ -68,13 +79,5 @@ router.route('/')
       return res.send({message: 'success'});
     });
   });
-  router.route('/tags')
-  .get(function(req, res) {
-    Tag.find(function(err, tags) {
-      if (err) return res.status(500).send(err);
-
-      return res.send(tags);
-    })
-  })
-
+  
   module.exports = router;

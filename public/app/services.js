@@ -39,7 +39,7 @@
       }
     }
   }])
-  .factory('Tags', ['$resource', function($resource) {
-    return $resource('/api/tags')
+  .factory('Tags', ['$resource', 'Auth', function($resource, Auth) {
+    return $resource('/api/items/tags/:id');
   }]);
 })();
