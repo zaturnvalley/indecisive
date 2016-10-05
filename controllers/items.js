@@ -1,8 +1,8 @@
 var express = require('express');
 var Item = require('../models/item');
-var Rating = require('../models/rating');
+var Rating = require('../models/schema/rating');
 var User = require('../models/user');
-var Tag = require('../models/tag');
+var Tag = require('../models/schema/tag');
 var router = express.Router();
 
 router.route('/')
