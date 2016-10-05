@@ -15,23 +15,34 @@ router.route('/')
   })
   .post(function(req, res) {
     console.log('***POST CONTROLLER', req.body);
-    Item.create(req.body.name, function(err, item) {
-      if (err) return res.status(500).send(err);
-        item.name = ser.items;
-      Rating.create(req.body.rating, function(err, item){
+    User.findOne({_id: req.body.user}, function(err, user) {
+      if (err) return res.status(500).send(err, {message: 'User Not Found'});
+
+      Item.findOrCreate({name: req.body.name}, function(err,item) {
         if (err) return res.status(500).send(err);
-          item.rating = Rating._id;
-          item.rating = User.ratings;
-          Rating.save();
-        Tag.create(req.body.tag, function(err, item){
+
+        Rating.create(req.body.rating, function(err, rating) {
           if (err) return res.status(500).send(err);
-            item.tag = Tag._id
-            Item.save();
-          User.update(req.body.)
-        })
-      })
-      return res.send(item);
+
+          Tag.findOrCreate({tag: req.body.tag}, function(err, tag) {
+            if (err) return res.status(500).send(err);
+
+            user.ratings.push(rating._id);
+            user.items.push(item._id);
+            item.ratings.push(rating._id);
+            item.tags.push(tag._id);
+            rating.item.push(item._id);
+            rating.user.push(user._id);
+            tag.item.push(item)
+            user.save();
+            item.save();
+            rating.save();
+            tag.save();
+          });
+        });
+      });
     });
+    return res.send(item);
   });
 
   router.route('/:id')
