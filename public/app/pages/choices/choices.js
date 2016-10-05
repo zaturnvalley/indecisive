@@ -5,8 +5,12 @@
   function ChoicesCtrl($http, $state, Auth, AuthInterceptor) {
     var vm = this;
     var item = {
-      name: '',
-      rating: 0
+      name: ''
+    }
+    var rating = {
+      rating: 0,
+      user: ,
+      item: 
     }
     vm.submitItem = function() {
       $http.post('/api/item', vm.item).then(function success(res) {

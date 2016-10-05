@@ -33,6 +33,11 @@
         templateUrl: 'app/pages/choices/choices.html',
         controller: 'ChoicesCtrl as vm'
       })
+      .state('about', {
+        url: '/about',
+        templateUrl: 'app/pages/about/about.html',
+        controller: 'AboutCtrl as vm'
+      })
       $locationProvider.html5Mode(true);
     }])
 })();
