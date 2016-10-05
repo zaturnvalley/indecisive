@@ -44,7 +44,7 @@
         controller: 'ChartsCtrl as vm'
       })
       .state('tags', {
-        url: 'tags',
+        url: '/tags',
         templateUrl: 'app/pages/tags/tags.html',
         controller: 'TagsCtrl as vm'
       })
