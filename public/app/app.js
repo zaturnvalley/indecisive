@@ -38,6 +38,16 @@
         templateUrl: 'app/pages/about/about.html',
         controller: 'AboutCtrl as vm'
       })
+      .state('charts', {
+        url: '/charts',
+        templateUrl: 'app/pages/charts/charts.html',
+        controller: 'ChartsCtrl as vm'
+      })
+      .state('tags', {
+        url: 'tags',
+        templateUrl: 'app/pages/tags/tags.html',
+        controller: 'TagsCtrl as vm'
+      })
       $locationProvider.html5Mode(true);
     }])
 })();
