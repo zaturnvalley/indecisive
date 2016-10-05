@@ -7,12 +7,11 @@
     vm.item = {
       name: '',
       rating: 0,
-      user: Auth.user,
+      user: Auth.currentUser().id,
       tag: ''
     }
     vm.submitItem = function() {
-      console.log(Auth.currentUser().id)
-      console.log(vm.item.rating)
+      console.log(vm.item)
       $http.post('/api/items', vm.item).then(function success(res) {
         $state.go('home');
       }, function error(res) {
