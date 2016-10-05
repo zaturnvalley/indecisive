@@ -5,6 +5,10 @@ var ItemSchema = mongoose.Schema({
   ratings: [{
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Rating'
+  }],
+  tags: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Tag'
   }]
 });
 

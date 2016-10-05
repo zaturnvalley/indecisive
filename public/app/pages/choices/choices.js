@@ -7,7 +7,8 @@
     vm.item = {
       name: '',
       rating: 0,
-      user: Auth.user
+      user: Auth.user,
+      tag: ''
     }
     vm.submitItem = function() {
       $http.post('/api/items', vm.item).then(function success(res) {
