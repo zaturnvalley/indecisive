@@ -6,7 +6,7 @@
     var vm = this;
 
     vm.testData = [4, 1];
-    vm.testLabels = ["Loved", "Hated"];
+    vm.labels = ["Loved", "Hated"];
     Charts.query(function success(chartData) {
  
      vm.getAverage = function (ratings){
