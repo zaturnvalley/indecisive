@@ -41,7 +41,10 @@
       .state('charts', {
         url: '/charts',
         templateUrl: 'app/pages/charts/charts.html',
-        controller: 'ChartsCtrl as vm'
+        controller: 'ChartsCtrl as vm',
+        bindings: {
+          avrgNum: '='
+        }
       })
       .state('tags', {
         url: '/tags',
