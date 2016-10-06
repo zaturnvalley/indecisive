@@ -51,21 +51,24 @@ router.route('/')
     console.log("/tags");
     Tag.find({}, function(err, tags) {
       if (err) return res.status(500).send(err);
-      console.log("got tags:", tags);
       return res.send(tags);
     })
   });
 
   router.route('/charts')
   .get(function(req, res) {
+    console.log('***In charts route');
     Item.find({}, function(err, items) {
       if (err) return res.status(500).send(err);
+      console.log('got items:', items);
       Tag.find({}, function(err, tags) {
         if (err) return res.status(500).send(err);
-        Rating.find({}, function(err,ratings){
+        console.log('got tags:', tags);
+        Rating.find({}, function(err, ratings){
           if (err) return res.status(500).send(err);
-          console.log(items, tags, ratings);
-          return res.send(items, tags, ratings);
+          console.log('got items:', items);
+          console.log('got all:', items, tags, ratings);
+          return res.send({items: items, tags: tags, ratings: ratings});
         });
       });
     });
