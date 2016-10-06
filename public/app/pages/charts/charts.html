@@ -6,7 +6,7 @@
         <li ng-repeat="item in vm.items">
           {{item.name}}
 
-          <chart av="{{vm.getAverage(item.ratings)}}"></chart>
+          <chart av="vm.getAverage(item.ratings)"></chart>
         </li>
       </ul>
     </div>
