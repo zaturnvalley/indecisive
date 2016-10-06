@@ -62,6 +62,11 @@ router.route('/')
 
       return res.send({items: items});
     })
+  .delete(function(req, res) {
+    Item.findByIdAndRemove(req.params.id, function(err) {
+      
+    })
+  })
       // , function(err, items) {
       // if (err) return res.status(500).send(err);
       // Tag.find({}, function(err, tags) {

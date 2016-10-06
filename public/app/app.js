@@ -5,7 +5,7 @@
     function($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
       //$httpProvider.interceptors.push('AuthInterceptor');
 
-      // $urlRouterProvider.otherwise('/404');
+      $urlRouterProvider.otherwise('/404');
 
       $stateProvider
       .state('home', {

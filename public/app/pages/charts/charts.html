@@ -5,14 +5,11 @@
       <ul>
         <li ng-repeat="item in vm.items">
           {{item.name}}
-          <span ng-repeat="tag in item.tags">
-            {{tag.tag}}
-          </span>
-          <li>
-            Average Rating: {{rating}}
-          </li>
+
+          <chart av="{{vm.getAverage(item.ratings)}}"></chart>
         </li>
       </ul>
     </div>
   </div>
+  <chart></chart>
 </div>
