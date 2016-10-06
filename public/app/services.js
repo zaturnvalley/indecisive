@@ -43,7 +43,6 @@
     return $resource('/api/items/tags');
   }])
   .factory('Charts', ['$resource', 'Auth', function($resource, Auth) {
-    console.log('in factory');
     return $resource('/api/items/charts', {}, {
       query: { isArray: false }
     });
