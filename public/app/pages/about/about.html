@@ -1,3 +1,127 @@
+<style>
+  body {
+  background: #b3e5d4;
+}
+
+.contain {
+  position: relative;
+  margin: 125px auto;
+  width: 250px;
+  height: 550px;
+}
+
+.box {
+  position: relative;
+  margin: 100px auto;
+  width: 240px;
+  height: 240px;
+  -webkit-transform-style: preserve-3d;
+  -webkit-animation: rotate 4s infinite;
+  transform-style: preserve-3d;
+  animation: rotate 4s infinite;
+}
+
+.face {
+  position: absolute;
+  background-color: #fae48c;
+  opacity: .6;
+  width: 240px;
+  height: 240px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.box .one  {
+  background-color: #fae48c;
+  -webkit-transform: rotateX(90deg) translateZ(120px);
+  transform: rotateX(90deg) translateZ(120px);
+}
+
+.box .two {
+  background-color: #ff6970;
+  -webkit-transform: translateZ(120px);
+  transform: translateZ(120px);
+}
+
+.box .three {
+  background: #ff939f;
+  -webkit-transform: rotateY(90deg) translateZ(120px);
+  transform: rotateY(90deg) translateZ(120px);
+}
+
+.box .four {
+  background: #ff6970;
+  -webkit-transform: rotateY(180deg) translateZ(120px);
+  transform: rotateY(180deg) translateZ(120px);
+}
+
+.box .five {
+  background: #ff939f;
+  -webkit-transform: rotateY(-90deg) translateZ(120px);
+  transform: rotateY(-90deg) translateZ(120px);
+}
+
+.box .six {
+  background: #fae48c;
+  -webkit-transform: rotateX(-90deg) translateZ(120px) rotate(180deg);
+  transform: rotateX(-90deg) translateZ(120px) rotate(180deg);
+}
+
+img {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+.donut-text {
+  top: 55px;
+  left: 60px;
+}
+
+.enjoy {
+  top: 90px;
+  left: 50px;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+label {
+  position: absolute;
+  top: 325px;
+  left: 60px;
+  padding: 5px;
+  background: #ff6970;
+  border-radius: 5px;
+  font-family: 'Alegreya Sans', sans-serif;
+  color: #b3e5d4;
+  text-align: center;
+  font-size: 18px;
+  width: 125px;
+  cursor: pointer;
+}
+
+input:checked ~ .box .face {
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+}
+
+@-webkit-keyframes rotate {
+  to {
+    -webkit-transform: rotateY(360deg) rotateX(360deg);
+  }
+}
+
+@keyframes rotate {
+  to {
+    transform: rotateY(360deg) rotateX(360deg);
+  }
+}
+
+
+
+</style>
 <div class="container comingSoon text-center">
   <div class="row">
     <div class="col-xs-8 col-xs-offset-2">
@@ -6,3 +130,27 @@
     </div>
   </div>
 </div>
+<div class="contain">
+    <input type="checkbox" id="backface" /> 
+    <label for="backface">Transparent</label>
+    <div class="box">
+      <div class="face one">
+      <img class="enjoy" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/80625/enjoy.svg" alt="Enjoy" />
+      </div>
+      <div class="face two">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/80625/boxdonut.svg" alt="Donut" />
+      </div>
+      <div class="face three">
+        <img class="donut-text" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/80625/boxdonuttext.svg" alt="Donut Text" />
+      </div>
+      <div class="face four">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/80625/boxdonuttext.svg" alt="Donut" />
+      </div>
+      <div class="face five">  
+        <img class="donut-text" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/80625/boxdonuttext.svg" alt="Donut Text" />
+      </div>
+      <div class="face six">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/80625/bottombox.svg" alt="Bar Code" />
+      </div>
+    </div>
+  </div>
