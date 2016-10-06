@@ -2,19 +2,99 @@
   <h1 ng-show="Auth.isLoggedIn()">Welcome {{Auth.username}}</h1>
   <h1 class="text-center comingSoon">A site that helps you make decisions</h1>
   <div class="row">
-    <div class="col-md-12" style="background-color: #414141; height: 300px;"></div>
+    <div class="col-md-12" style="background-color: #414141; height: 200px;">
+      <div class="col-xs-4 frontPage">
+        <h3>Jeff from Toronto</h3>
+        <p>I couldn't make up my mind between chocolate or maple. Indecisive helped me make a decision! Every time I eat a donut, I log my info. My friends do the same. It's become a fun competition.</p>
+      </div>
+
+      <div class="col-xs-2">
+        <h4 class="frontPage">The Data Shows:</h4>
+        <br>
+        <p class="frontPage">Most Users Like Maple Bars over Chocolate</p>
+      </div>
+
+      <div class="col-xs-3">
+        <h4 class="frontPage text-center">Chocolate Donut</h4>
+        <canvas id="doughnut" class="chart chart-doughnut" chart-data="[3.5,1.5]" chart-labels="['Loved', 'Hated']"></canvas>
+      </div>
+      <div class="col-xs-3">
+        <h4 class="frontPage text-center">Maple Donut</h4>
+        <canvas id="doughnut" class="chart chart-doughnut" chart-data="[4.5,.5]" chart-labels="['Loved', 'Hated']"></canvas>
+      </div>
+    </div>
   </div>
   <br>
   <div class="row">
-    <div class="col-md-12" style="background-color: #ff615c; height: 300px;"></div>
+    <div class="col-md-12" style="background-color: #ff615c; height: 200px;">
+      <div class="col-xs-4 frontPage">
+        <h3>Hiroya from Japan</h3>
+        <p>The small things in life are sometimes the hardest things to decide on. I am quite indecisive. I'm glad this site helped me figure out which toothpaste is the best to use. I like quick data to help inform my life.</p>
+      </div>
+
+      <div class="col-xs-2">
+        <h4 class="frontPage">The Data Shows:</h4>
+        <br>
+        <p class="frontPage">Most Users Like Colgate over Crest toothpaste</p>
+      </div>
+
+      <div class="col-xs-3">
+        <h4 class="frontPage text-center">Colgate</h4>
+        <canvas id="doughnut" class="chart chart-doughnut" chart-data="[4.6, .4]" chart-labels="['Loved', 'Hated']"></canvas>
+      </div>
+      <div class="col-xs-3">
+        <h4 class="frontPage text-center">Crest</h4>
+        <canvas id="doughnut" class="chart chart-doughnut" chart-data="[3, 2]" chart-labels="['Loved', 'Hated']"></canvas>
+      </div>
+    </div>
   </div>
   <br>
   <div class="row">
-    <div class="col-md-12" style="background-color: #ccdfcb; height: 300px;"></div>
+    <div class="col-md-12" style="background-color: #056571; height: 200px;">
+      <div class="col-xs-4 frontPage">
+        <h3>Debra from Seattle</h3>
+        <p>I was looking for the perfect present for my son. He really likes games, but I know next to nothing about video games. I did a bit of research on indecisive and found the best birthday present. He loved it! </p>
+      </div>
+
+      <div class="col-xs-2">
+        <h4 class="frontPage">The Data Shows:</h4>
+        <br>
+        <p class="frontPage">Most Users Like Overwatch over No Man's Sky</p>
+      </div>
+
+      <div class="col-xs-3">
+        <h4 class="frontPage text-center">Overwatch</h4>
+        <canvas id="doughnut" class="chart chart-doughnut" chart-data="[4.7, .3]" chart-labels="['Loved', 'Hated']"></canvas>
+      </div>
+      <div class="col-xs-3">
+        <h4 class="frontPage text-center">No Man's Sky</h4>
+        <canvas id="doughnut" class="chart chart-doughnut" chart-data="[1, 4]" chart-labels="['Loved', 'Hated']"></canvas>
+      </div>
+    </div>
   </div>
   <br>
   <div class="row">
-    <div class="col-md-12" style="background-color: #056571; height: 300px;"></div>
+    <div class="col-md-12" style="background-color: #414141; height: 200px;">
+      <div class="col-xs-4 frontPage">
+        <h3>Cece from Boston</h3>
+        <p>I wanted to know what the best pub was in the Boston area. I was getting a bit tired of the usual searches and wanted a fun way to see what is the best local haunt. This site helped me find out about one of my new favorite spots</p>
+      </div>
+
+      <div class="col-xs-2">
+        <h4 class="frontPage">The Data Shows:</h4>
+        <br>
+        <p class="frontPage">Most Users Like Biddy Early's over 21st Amendment for drinks.</p>
+      </div>
+
+      <div class="col-xs-3">
+        <h4 class="frontPage text-center">21st Amendment</h4>
+        <canvas id="doughnut" class="chart chart-doughnut" chart-data="[4, 1]" chart-labels="['Loved', 'Hated']"></canvas>
+      </div>
+      <div class="col-xs-3">
+        <h4 class="frontPage text-center">Biddy Early's</h4>
+        <canvas id="doughnut" class="chart chart-doughnut" chart-data="[4.5, .5]" chart-labels="['Loved', 'Hated']"></canvas>
+      </div>
+    </div>
   </div>
 </div>
 

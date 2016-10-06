@@ -39,6 +39,7 @@ router.route('/')
             item.save();
             rating.save();
             tag.save();
+            res.redirect('/');
           });
         });
       });

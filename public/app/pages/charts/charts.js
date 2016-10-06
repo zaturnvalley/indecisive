@@ -5,7 +5,7 @@
   function ChartsCtrl($http, $state, Auth, AuthInterceptor, Charts) {
     var vm = this;
 
-    vm.testData = [4, 1];
+    // vm.testData = [4, 1];
     vm.labels = ["Loved", "Hated"];
     Charts.query(function success(chartData) {
  
