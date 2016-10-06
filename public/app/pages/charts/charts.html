@@ -2,14 +2,15 @@
   <div class="row">
     <div class="col-xs-8 col-xs-offset-2">
       <h1>Charts</h1>
-      <ul>
-        <li ng-repeat="item in vm.items track by item._id">
-          {{item.name}}
-          <a ng-click="vm.deleteItem(item._id)" class="btn glyphicon glyphicon-trash" style="color:#ff615c">
-          <chart av="vm.getAverage(item.ratings)"></chart>
-        </li>
-      </ul>
+      <div class="well">
+        <div ng-repeat="item in vm.items track by item._id">
+          <h3>{{item.name}}</h3>
+          {{vm.getAverage(item.ratings)}}
+          <canvas id="doughnut" class="chart chart-doughnut" chart-data="vm.testData" chart-labels="vm.testLabels"></canvas>
+   <!--        <a ng-click="vm.deleteItem(item._id)" class="btn glyphicon glyphicon-trash" style="color:#ff615c">
+          <chart av="vm.getAverage(item.ratings)"></chart> -->
+        </div>
+      <div>
     </div>
   </div>
-  <chart></chart>
 </div>

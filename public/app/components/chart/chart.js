@@ -12,7 +12,7 @@
   function ChartCtrl() {
     var vm = this;
     vm.labels = ["Loved", "Hated"];
-    vm.data = [vm.av, (5 - vm.av)];
+    vm.data = [4, 1];
                 // backgroundColor: [
                 //     "#ff615c",
                 //     "#056571"
