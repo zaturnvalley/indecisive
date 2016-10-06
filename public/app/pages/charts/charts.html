@@ -3,11 +3,10 @@
     <div class="col-xs-8 col-xs-offset-2">
       <h1>Charts</h1>
       <ul>
-        <li ng-repeat="item in vm.items">
+        <li ng-repeat="item in vm.items track by item._id">
           {{item.name}}
-
+          <a ng-click="vm.deleteItem(item._id)" class="btn glyphicon glyphicon-trash" style="color:#ff615c">
           <chart av="vm.getAverage(item.ratings)"></chart>
-          <a ng-click="deleteItem(item._id" class="btn glyphicon glyphicon-trash">
         </li>
       </ul>
     </div>

@@ -43,7 +43,7 @@
     return $resource('/api/items/tags');
   }])
   .factory('Charts', ['$resource', 'Auth', function($resource, Auth) {
-    return $resource('/api/items/charts', {}, {
+    return $resource('/api/items/charts/:id', {}, {
       query: { isArray: false }
     });
   }]);

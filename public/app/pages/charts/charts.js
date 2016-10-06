@@ -17,5 +17,14 @@
     }, function error(chartData) {
       console.log(chartData.items);
     });
+
+    vm.deleteItem = function(id) {
+      console.log(id);
+      Charts.delete({ id: id }, function success(data) {
+        console.log('success', data);
+      }, function error(data) {
+        console.log(data);
+      });
+    }
   }
 })()

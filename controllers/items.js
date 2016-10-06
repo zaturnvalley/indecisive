@@ -55,20 +55,22 @@ router.route('/')
     })
   });
 
-  router.route('/charts')
+  router.route('/charts/')
   .get(function(req, res) {
     Item.find({}).populate('tags').populate('ratings').exec(function(err, items){
       if (err) return res.status(500).send(err);
 
       return res.send({items: items});
-    })
-  .delete(function(req, res) {
+    });
+  })
+  router.route('/charts/:id')
+    .delete(function(req, res) {
+    console.log(req.params.id);
     Item.findByIdAndRemove(req.params.id, function(err) {
       if (err) return res.status(500).send(err);
 
       return res.send({message: 'success'});
     })
-  })
       // , function(err, items) {
       // if (err) return res.status(500).send(err);
       // Tag.find({}, function(err, tags) {
