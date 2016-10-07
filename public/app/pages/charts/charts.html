@@ -9,7 +9,7 @@
           <canvas id="doughnut" class="chart chart-doughnut" chart-data="[vm.getAverage(item.ratings), (5-vm.getAverage(item.ratings))]" chart-labels="vm.labels"></canvas>
           <h7>Tags</h7>
           <a ui-sref="tags" ng-repeat="tag in item.tags">{{tag.tag}}</a>
-          <a ng-click="vm.deleteItem(item._id)" class="btn glyphicon glyphicon-trash" style="color: #ff615c"></a>
+          <a ng-click="vm.deleteItem(item._id)" class="btn glyphicon glyphicon-trash" style="color: white"></a>
    <!--        <a ng-click="vm.deleteItem(item._id)" class="btn glyphicon glyphicon-trash" style="color:#ff615c">
           <chart av="vm.getAverage(item.ratings)"></chart> -->
         </div>
