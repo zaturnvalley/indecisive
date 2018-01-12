@@ -1,14 +1,21 @@
 <nav class="navbar navbar-default navbar-fixed-top" id="mainNav">
-  <div class="navbar-brand navWords" ui-sref="home" value="indecisive">indecisive</div>
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed navbar-left" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"><span class="navText"><i class="fa fa-bars fa-1x"></i></span></button>  
+    <div class="navbar-brand navWords" ui-sref="home" value="indecisive">indecisive</div>
+  </div>    
+
   <img class="navWords" id="brand" src="img/donut.png" ui-sref="home">
-  <ul class="nav navbar-nav navbar-right">
-      <li><a class="navWords" ui-sref="choices" ng-show="vm.Auth.isLoggedIn()" value="Choices">Rate Item</a></li>
-      <li><a class="navWords" ui-sref="charts" value="Charts">Charts</a></li>
-      <li><a class="navWords" ui-sref="tags" value="Tags">Tags</a></li>
-      <li><a class="navWords" ui-sref="about" value="About">About</a></li>
-      <li><a class="navWords" ui-sref="signup" ng-hide="vm.Auth.isLoggedIn()" value="Sign Up">Sign Up</a></li>
-      <li><a class="navWords" ui-sref="signin" ng-hide="vm.Auth.isLoggedIn()" value="Sign In">Sign In</a></li>
-      <li><a class="navWords" ng-click="vm.LogOut()" ng-show="vm.Auth.isLoggedIn()">Log Out</a></li>
-      <li style="width:15px"> </li>
-  </ul>
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav navbar-right">
+        <li><a class="navWords" ui-sref="choices" ng-show="vm.Auth.isLoggedIn()" value="Choices">Rate Item</a></li>
+        <li><a class="navWords" ui-sref="charts" value="Charts">Charts</a></li>
+        <li><a class="navWords" ui-sref="tags" value="Tags">Tags</a></li>
+        <li><a class="navWords" ui-sref="about" value="About">About</a></li>
+        <li><a class="navWords" ui-sref="signup" ng-hide="vm.Auth.isLoggedIn()" value="Sign Up">Sign Up</a></li>
+        <li><a class="navWords" ui-sref="signin" ng-hide="vm.Auth.isLoggedIn()" value="Sign In">Sign In</a></li>
+        <li><a class="navWords" ng-click="vm.LogOut()" ng-show="vm.Auth.isLoggedIn()">Log Out</a></li>
+        <li style="width:15px"> </li>
+    </ul>
+  </div>
 </nav>
